@@ -1,0 +1,84 @@
+ul {
+    list-style-type:none;
+    padding:2px;
+    }
+    
+    ul li {
+    display:block;
+    float:left;
+    }
+    li ul{
+    display:none;
+    }
+    
+    ul li a {
+    display:block;
+    background-color:#007689;
+    padding:10px;
+    text-decoration:none;
+    color:white;
+    width:370px;
+    border:2px solid red;
+    text-align: center;
+    }
+    ul li a:hover{
+    background-color: #5b6d70;
+    color:white;
+    }
+    li:hover ul{
+    display:block;
+    position:absolute;
+    }
+    li:hover li{
+    float:none;
+    }
+    li:hover a{
+    background-color: #94C548;
+    color:black;
+    }
+    li:hover li a:hover {
+    background:#5b6d70;
+    width:370px;
+    }
+    
+    img{
+        width: 300px;
+        border-radius: 5px;
+    }
+    
+    div.gallery {
+    margin:5px;
+    border: 1px solid white;
+    float: left;
+    width: 510px;
+    }
+    
+    div.gallery:hover {
+    border: 2px solid rgb(235, 11, 11);
+    }
+    
+    div.gallery img {
+    width: 100%;
+    height: auto;
+    }
+    h2{
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px;
+    }
+
+    body {
+        background-image: url(images/Back\ To\ Earth.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    .dropdown-menu{
+        z-index: 10;
+        visibility: visible;
+    }
+    .marquee{
+         animation-duration: 5s;
+         animation-timing-function: linear;
+    }
