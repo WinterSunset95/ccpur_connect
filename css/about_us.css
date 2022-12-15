@@ -1,0 +1,17 @@
+
+
+
+body {
+	background-image: url("../images/back_to_earth.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-weight: bold;
+}

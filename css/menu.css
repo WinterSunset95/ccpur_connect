@@ -11,12 +11,20 @@ a {
 
 /* Background image */
 body {
-	background-image: url(images/Back\ To\ Earth.jpg);
+	background-image: url("../images/back_to_earth.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
+}
+
+.center {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .description {
@@ -26,19 +34,25 @@ body {
 
 /* Define how the menu will look on mobile */
 .dropdown-menu {
+	background-color: #1d4e89;
 	display: grid;
-	grid-template-columns: repeat(2, minmax(100px, 1fr));
-	padding: 1rem; 
+	grid-template-columns: repeat(4, minmax(10px, 1fr));
+	padding: 0.25rem;
+	margin: 1rem;
 	grid-gap: 5px;
 }
 
 /* styling for menu items */
 .dropdown-menu > li {
 	position: relative;
-	background-color: #1d4e89;
 	text-align: center;
-	padding: 1rem 0.25rem 1rem 0.25rem;
+	font-size: small;
 	border-radius: 0.25rem;
+	padding: 0.25rem 0 0.25rem 0;
+}
+
+.dropdown-menu > li:hover {
+	background-color: #7dcfd6;
 }
 
 /* For desktop users */
@@ -103,7 +117,7 @@ body {
 	padding: 1rem;
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-columns: repeat(1, minmax(100px, 1fr));
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
 }
 
 /* All images from the gallery should occupy all available width */
@@ -132,9 +146,13 @@ ul {
 	.dropdown-menu {
 		grid-template-columns: repeat(4, minmax(100px, 1fr));
 	}
-	.gallery {
-		grid-template-columns: repeat(2, minmax(100px, 1fr));
+	.dropdown-menu > li {
+		padding: 1rem 0 1rem 0;
 	}
+	.gallery {
+		grid-template-columns: repeat(4, minmax(100px, 1fr));
+	}
+}
 
 
 
