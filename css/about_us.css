@@ -1,11 +1,14 @@
 
 
+/* Importing my favourite fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
 	background-image: url("../images/back_to_earth.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -14,4 +17,25 @@ h1 {
 
 h2 {
 	font-weight: bold;
+}
+
+.links {
+	display: grid;
+	grid-template-columns: repeat(8, minmax(10px, 1fr));
+	grid-gap: 0.5rem;
+}
+
+.links > a {
+	text-decoration: none;
+}
+
+.links > a > img {
+	width: 100%;
+	border-radius: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	.links {
+		grid-template-columns: repeat(12, minmax(10px, 1fr));
+	}
 }
