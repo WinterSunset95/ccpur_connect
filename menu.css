@@ -1,8 +1,12 @@
 /* It's common practice to arrange selectors in alphabetical order */
 
+/* Importing my favourite fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Remove default styling of all anchor tags */
 a {
   text-decoration: none;
+  color: white;
 }
 
 /* Background image */
@@ -11,6 +15,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.description {
+  padding: 1rem;
 }
 
 /* Define how the menu will look on mobile */
@@ -21,27 +31,30 @@ body {
   grid-gap: 5px;
 }
 
+/* styling for menu items */
 .dropdown-menu > li {
   position: relative;
-  background-color: #007689;
-  border: 2px solid red;
+  background-color: #1d4e89;
   text-align: center;
   padding: 1rem 0.25rem 1rem 0.25rem;
   border-radius: 0.25rem;
 }
 
+/* For desktop users */
+/* Show dropdown on hover */
 .dropdown-menu > li:hover > ul {
   height: fit-content;
   padding: 1rem;
-  border: 2px solid red;
 }
 
+/* For mobile users */
+/* Show dropdown on click */
 .dropdown-menu > li:active > ul {
   height: fit-content;
   padding: 1rem;
-  border: 2px solid red;
 }
 
+/* styling for the dropdown container */
 .dropdown-item-container {
   height: 0;
   width: 12rem;
@@ -49,25 +62,46 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 3rem;
-  transition: all 0.2s ease-in-out;
+  top: 3.5rem;
+  transition: all 0.2s;
   overflow: hidden;
   background-color: #007689;
+  border-radius: 0.25rem;
   z-index: 20;
 }
 
+/* the next two parts are necessary for the underlined link items to show properly */
 .dropdown-item-container > li {
+  width: 100%;
+  height: fit-content;
+  border-radius: 1rem;
+  padding: 1rem 0.25rem 1rem 0.25rem;
+}
+
+.dropdown-item-container > li > a {
   text-align: center;
   padding: 1rem 0.25rem 1rem 0.25rem;
-  border-radius: 1rem;
-  width: inherit;
+}
+
+/* Change background color when hovering over dropdown items */
+.dropdown-item-container > li:hover {
+  background-color: #7dcfd6;
+}
+.dropdown-item-container > li:hover > a {
+  border-bottom: 0px solid black;
+  color: black;
+}
+
+/* black underline on the dropdown items */
+.dropdown-item-container > li:not(:last-child) > a {
+  border-bottom: 1px solid black;
 }
 
 /* The gallery */
 .gallery {
   padding: 1rem;
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 1rem;
   grid-template-columns: repeat(1, minmax(100px, 1fr));
 }
 
@@ -76,18 +110,30 @@ body {
   width: 100%;
 }
 
+/* Change the cursor to pointer on all 'li' items */
+li {
+  cursor: pointer;
+}
+
+marquee {
+  color: black;
+  margin: 0 1rem 0 1rem;
+}
+
 /* All unordered lists will have a padding of 1rem */
 ul {
   list-style-type:none;
   padding: 1rem; /* 'rem' is preferred over 'px' */
 }
 
-/* On medium sized screens */
+/* On medium sized screens and bigger */
 @media only screen and (min-width: 768px) {
+  .dropdown-menu {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
   .gallery {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
-}
 
 
 
