@@ -1,84 +1,168 @@
-ul {
-    list-style-type:none;
-    padding:2px;
-    }
-    
-    ul li {
-    display:block;
-    float:left;
-    }
-    li ul{
-    display:none;
-    }
-    
-    ul li a {
-    display:block;
-    background-color:#007689;
-    padding:10px;
-    text-decoration:none;
-    color:white;
-    width:370px;
-    border:2px solid red;
-    text-align: center;
-    }
-    ul li a:hover{
-    background-color: #5b6d70;
-    color:white;
-    }
-    li:hover ul{
-    display:block;
-    position:absolute;
-    }
-    li:hover li{
-    float:none;
-    }
-    li:hover a{
-    background-color: #94C548;
-    color:black;
-    }
-    li:hover li a:hover {
-    background:#5b6d70;
-    width:370px;
-    }
-    
-    img{
-        width: 300px;
-        border-radius: 5px;
-    }
-    
-    div.gallery {
-    margin:5px;
-    border: 1px solid white;
-    float: left;
-    width: 510px;
-    }
-    
-    div.gallery:hover {
-    border: 2px solid rgb(235, 11, 11);
-    }
-    
-    div.gallery img {
-    width: 100%;
-    height: auto;
-    }
-    h2{
-        font-size: 40px;
-    }
-    p{
-        font-size: 20px;
-    }
+/* It's common practice to arrange selectors in alphabetical order */
 
-    body {
-        background-image: url(images/Back\ To\ Earth.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
-    .dropdown-menu{
-        z-index: 10;
-        visibility: visible;
-    }
-    .marquee{
-         animation-duration: 5s;
-         animation-timing-function: linear;
-    }
+/* Remove default styling of all anchor tags */
+a {
+  text-decoration: none;
+}
+
+/* Background image */
+body {
+  background-image: url(images/Back\ To\ Earth.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Define how the menu will look on mobile */
+.dropdown-menu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  padding: 1rem; 
+  grid-gap: 5px;
+}
+
+.dropdown-menu > li {
+  position: relative;
+  background-color: #007689;
+  border: 2px solid red;
+  text-align: center;
+  padding: 1rem 0.25rem 1rem 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.dropdown-menu > li:hover > ul {
+  height: fit-content;
+  padding: 1rem;
+  border: 2px solid red;
+}
+
+.dropdown-menu > li:active > ul {
+  height: fit-content;
+  padding: 1rem;
+  border: 2px solid red;
+}
+
+.dropdown-item-container {
+  height: 0;
+  width: 12rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3rem;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  background-color: #007689;
+  z-index: 20;
+}
+
+.dropdown-item-container > li {
+  text-align: center;
+  padding: 1rem 0.25rem 1rem 0.25rem;
+  border-radius: 1rem;
+  width: inherit;
+}
+
+/* The gallery */
+.gallery {
+  padding: 1rem;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(1, minmax(100px, 1fr));
+}
+
+/* All images from the gallery should occupy all available width */
+.gallery > img {
+  width: 100%;
+}
+
+/* All unordered lists will have a padding of 1rem */
+ul {
+  list-style-type:none;
+  padding: 1rem; /* 'rem' is preferred over 'px' */
+}
+
+/* On medium sized screens */
+@media only screen and (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+
+
+
+/* 
+
+ul li {
+  display:block;
+  float:left;
+}
+li ul{
+  display:none;
+}
+
+ul li a {
+  display:block;
+  padding:10px;
+  text-decoration:none;
+  color:white;
+  width:370px;
+  border:2px solid red;
+  text-align: center;
+}
+ul li a:hover{
+  background-color: #5b6d70;
+  color:white;
+}
+li:hover ul{
+  display:block;
+  position:absolute;
+}
+li:hover li{
+  float:none;
+}
+li:hover a{
+  background-color: #94C548;
+  color:black;
+}
+li:hover li a:hover {
+  background:#5b6d70;
+  width:370px;
+}
+
+img{
+  width: 300px;
+  border-radius: 5px;
+}
+
+div.gallery {
+  margin:5px;
+  border: 1px solid white;
+  float: left;
+  width: 510px;
+}
+
+div.gallery:hover {
+  border: 2px solid rgb(235, 11, 11);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+h2{
+  font-size: 40px;
+}
+p{
+  font-size: 20px;
+}
+
+.dropdown-menu{
+  z-index: 10;
+  visibility: visible;
+}
+.marquee{
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+*/
