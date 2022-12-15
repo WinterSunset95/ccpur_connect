@@ -5,210 +5,211 @@
 
 /* Remove default styling of all anchor tags */
 a {
-  text-decoration: none;
-  color: white;
+	text-decoration: none;
+	color: white;
 }
 
 /* Background image */
 body {
-  background-image: url(images/Back\ To\ Earth.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: 'Montserrat', sans-serif;
-  color: white;
+	background-image: url(images/Back\ To\ Earth.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Montserrat', sans-serif;
+	color: white;
 }
 
 .description {
-  padding: 1rem;
+	padding: 1rem;
+	color: black;
 }
 
 /* Define how the menu will look on mobile */
 .dropdown-menu {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  padding: 1rem; 
-  grid-gap: 5px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(100px, 1fr));
+	padding: 1rem; 
+	grid-gap: 5px;
 }
 
 /* styling for menu items */
 .dropdown-menu > li {
-  position: relative;
-  background-color: #1d4e89;
-  text-align: center;
-  padding: 1rem 0.25rem 1rem 0.25rem;
-  border-radius: 0.25rem;
+	position: relative;
+	background-color: #1d4e89;
+	text-align: center;
+	padding: 1rem 0.25rem 1rem 0.25rem;
+	border-radius: 0.25rem;
 }
 
 /* For desktop users */
 /* Show dropdown on hover */
 .dropdown-menu > li:hover > ul {
-  height: fit-content;
-  padding: 1rem;
+	height: fit-content;
+	padding: 1rem;
 }
 
 /* For mobile users */
 /* Show dropdown on click */
 .dropdown-menu > li:active > ul {
-  height: fit-content;
-  padding: 1rem;
+	height: fit-content;
+	padding: 1rem;
 }
 
 /* styling for the dropdown container */
 .dropdown-item-container {
-  height: 0;
-  width: 12rem;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 3.5rem;
-  transition: all 0.2s;
-  overflow: hidden;
-  background-color: #007689;
-  border-radius: 0.25rem;
-  z-index: 20;
+	height: 0;
+	width: 12rem;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 3.5rem;
+	transition: all 0.2s;
+	overflow: hidden;
+	background-color: #007689;
+	border-radius: 0.25rem;
+	z-index: 20;
 }
 
 /* the next two parts are necessary for the underlined link items to show properly */
 .dropdown-item-container > li {
-  width: 100%;
-  height: fit-content;
-  border-radius: 1rem;
-  padding: 1rem 0.25rem 1rem 0.25rem;
+	width: 100%;
+	height: fit-content;
+	border-radius: 1rem;
+	padding: 1rem 0.25rem 1rem 0.25rem;
 }
 
 .dropdown-item-container > li > a {
-  text-align: center;
-  padding: 1rem 0.25rem 1rem 0.25rem;
+	text-align: center;
+	padding: 1rem 0.25rem 1rem 0.25rem;
 }
 
 /* Change background color when hovering over dropdown items */
 .dropdown-item-container > li:hover {
-  background-color: #7dcfd6;
+	background-color: #7dcfd6;
 }
 .dropdown-item-container > li:hover > a {
-  border-bottom: 0px solid black;
-  color: black;
+	border-bottom: 0px solid black;
+	color: black;
 }
 
 /* black underline on the dropdown items */
 .dropdown-item-container > li:not(:last-child) > a {
-  border-bottom: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 /* The gallery */
 .gallery {
-  padding: 1rem;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(1, minmax(100px, 1fr));
+	padding: 1rem;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: repeat(1, minmax(100px, 1fr));
 }
 
 /* All images from the gallery should occupy all available width */
 .gallery > img {
-  width: 100%;
+	width: 100%;
 }
 
 /* Change the cursor to pointer on all 'li' items */
 li {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 marquee {
-  color: black;
-  margin: 0 1rem 0 1rem;
+	color: black;
+	margin: 0 1rem 0 1rem;
 }
 
 /* All unordered lists will have a padding of 1rem */
 ul {
-  list-style-type:none;
-  padding: 1rem; /* 'rem' is preferred over 'px' */
+	list-style-type:none;
+	padding: 1rem; /* 'rem' is preferred over 'px' */
 }
 
 /* On medium sized screens and bigger */
 @media only screen and (min-width: 768px) {
-  .dropdown-menu {
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-  }
-  .gallery {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-  }
+	.dropdown-menu {
+		grid-template-columns: repeat(4, minmax(100px, 1fr));
+	}
+	.gallery {
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
+	}
 
 
 
-/* 
-
-ul li {
-  display:block;
-  float:left;
-}
-li ul{
-  display:none;
-}
-
-ul li a {
-  display:block;
-  padding:10px;
-  text-decoration:none;
-  color:white;
-  width:370px;
-  border:2px solid red;
-  text-align: center;
-}
-ul li a:hover{
-  background-color: #5b6d70;
-  color:white;
-}
-li:hover ul{
-  display:block;
-  position:absolute;
-}
-li:hover li{
-  float:none;
-}
-li:hover a{
-  background-color: #94C548;
-  color:black;
+	/* 
+	
+	ul li {
+	display:block;
+	float:left;
+	}
+	li ul{
+	display:none;
+	}
+	
+	ul li a {
+	display:block;
+	padding:10px;
+	text-decoration:none;
+	color:white;
+	width:370px;
+	border:2px solid red;
+	text-align: center;
+	}
+	ul li a:hover{
+	background-color: #5b6d70;
+	color:white;
+	}
+	li:hover ul{
+	display:block;
+	position:absolute;
+	}
+	li:hover li{
+	float:none;
+	}
+	li:hover a{
+	background-color: #94C548;
+	color:black;
 }
 li:hover li a:hover {
-  background:#5b6d70;
-  width:370px;
+	background:#5b6d70;
+	width:370px;
 }
 
 img{
-  width: 300px;
-  border-radius: 5px;
+	width: 300px;
+	border-radius: 5px;
 }
 
 div.gallery {
-  margin:5px;
-  border: 1px solid white;
-  float: left;
-  width: 510px;
+	margin:5px;
+	border: 1px solid white;
+	float: left;
+	width: 510px;
 }
 
 div.gallery:hover {
-  border: 2px solid rgb(235, 11, 11);
+	border: 2px solid rgb(235, 11, 11);
 }
 
 div.gallery img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 h2{
-  font-size: 40px;
+	font-size: 40px;
 }
 p{
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .dropdown-menu{
-  z-index: 10;
-  visibility: visible;
+	z-index: 10;
+	visibility: visible;
 }
 .marquee{
-  animation-duration: 5s;
-  animation-timing-function: linear;
+	animation-duration: 5s;
+	animation-timing-function: linear;
 }
 */
