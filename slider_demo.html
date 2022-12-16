@@ -109,9 +109,9 @@ ul {
 			// This function moves the items to the left
 			const previous = () => {
 				if (active[0] > 0) {
-					active[0] = active[0] - 1
-					active[1] = active[1] - 1
-					active[2] = active[2] - 1
+					for (let i = 0; i < active.length; i++) {
+						active[i] -= 1
+					}
 				} else {
 					console.log("end of list")
 				}
@@ -119,10 +119,10 @@ ul {
 			}
 			// This function moves the items to the right
 			const next = () => {
-				if (active[2] < 5) {
-					active[0] = active[0] + 1
-					active[1] = active[1] + 1
-					active[2] = active[2] + 1
+				if (active[active.length-1] < 5) {
+					for (let i = 0; i < active.length; i++) {
+						active[i] += 1
+					}
 				} else {
 					console.log("end of list")
 				}
