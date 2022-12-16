@@ -1,0 +1,134 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Slider Demo</title>
+	</head>
+	<body>
+
+		<!-- I'll use internal css for ease of reference -->
+		<style>
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: sans-serif;
+}
+
+.button-container {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+button {
+	background-color: #fff;
+	border: none;
+	border-radius: 100%;
+	padding: 1rem;
+	position: absolute;
+}
+
+button:first-child {
+	left: 0;
+}
+
+button:last-child {
+	right: 0;
+}
+
+li[data-status="hidden"] {
+	display: none;
+}
+
+.slider {
+	width: 100%;
+	height: 24rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0.5rem;
+	padding: 0;
+}
+
+.slider-container {
+	position: relative;
+	padding: 0.5rem;
+}
+
+/* By giving the images height and width of 100%, they will be contained within their respective parent element */
+/* Try removing the width and height to see what happens */
+.slider-item > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+ul {
+	list-style: none;
+}
+
+		</style>
+
+		<div class="slider-container">
+			<div class="button-container">
+				<button onclick="previous()">Prev</button>
+				<button onclick="next()">Next</button>
+			</div>
+			<ul class="slider">
+				<li class="slider-item" data-status="active"><img src="./images/back_to_earth.jpg" alt=""></li>
+				<li class="slider-item" data-status="active"><img src="./images/dam_1.jpg" alt=""></li>
+				<li class="slider-item" data-status="active"><img src="./images/download.jpeg" alt=""></li>
+				<li class="slider-item" data-status="hidden"><img src="./images/geljang.jpg" alt=""></li>
+				<li class="slider-item" data-status="hidden"><img src="./images/download.jpg" alt=""></li>
+				<li class="slider-item" data-status="hidden"><img src="./images/pretty_lights.jpg" alt=""></li>
+			</ul>
+		</div>
+
+		<!-- Internal javascript for easy reference -->
+		<script>
+			// First we declare what items to show
+			// 0, 1, and 2 refer to the first, second and third items in the list
+			// (remember, arrays start at 0)
+			let active = [0, 1, 2]
+			// next using querySelectorAll, we select all the items in the list
+			const sliderItems = document.querySelectorAll('.slider-item')
+			// This here is a function that first hides all elements, and then shows the ones we want
+			const render = () => {
+				sliderItems.forEach(sliderItem => sliderItem.dataset.status = 'hidden') // hide all items
+				active.map((item, index) => { // for each number in 'array'
+					sliderItems[item].dataset.status = 'active' // show the corresponding item
+				})
+			}
+			// This function moves the items to the left
+			const previous = () => {
+				if (active[0] > 0) {
+					active[0] = active[0] - 1
+					active[1] = active[1] - 1
+					active[2] = active[2] - 1
+				} else {
+					console.log("end of list")
+				}
+				render()
+			}
+			// This function moves the items to the right
+			const next = () => {
+				if (active[2] < 5) {
+					active[0] = active[0] + 1
+					active[1] = active[1] + 1
+					active[2] = active[2] + 1
+				} else {
+					console.log("end of list")
+				}
+				render()
+			}
+		</script>
+
+	</body>
+</html>
