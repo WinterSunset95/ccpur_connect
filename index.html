@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="css/menu.css"/> 
 		<title>CCPUR web connect</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 
 	<body>
@@ -61,25 +62,28 @@
 		<div>
 			<marquee bgcolor="pink">***All types of booking can be done from this webpage***</marquee>
 		</div>
-        <div>
+
+		
+		<div class="map">
 			<img src="images/churachandpur.png">
+			<!-- Description -->
+			<div class="description">
+				<p>
+				This web is to specially bring all the Events , Travel's destination , Transport facilities in the district of CHURACHANDPUR to help visitor and outsider 
+				to CHURACHANDPUR know more about the district and find it easier to book Hotels, Transport's, and other facilities easier for the user.	
+				</p>
+				<p>
+				We provide the service of booking Resort's, Hotel's, Transport ,Travel guide and many more which will help your travel becomes more convenient.
+				</p>
+			</div>
 		</div>
-		<!-- Description -->
-		<div class="description">
-			<p>
-			This web is to specially bring all the Events , Travel's destination , Transport facilities in the district of CHURACHANDPUR to help visitor and outsider 
-			to CHURACHANDPUR know more about the district and find it easier to book Hotels, Transport's, and other facilities easier for the user.	
-			</p>
-			<p>
-			We provide the service of booking Resort's, Hotel's, Transport ,Travel guide and many more which will help your travel becomes more convenient.
-			</p>
-		</div>
+
 		<h2>Explore CHURACHANDPUR</h2>
 		<!-- Image gallery -->
 		<div class="slider-container">
 			<div class="button-container">
-				<button onclick="previous()"><</button>
-				<button onclick="next()">></button>
+				<button onclick="previous()"><i class="fa-solid fa-arrow-left"></i></button>
+				<button onclick="next()"><i class="fa-solid fa-arrow-right"></i></button>
 			</div>
 			<ul class="slider">
 				<li class="slider-item" data-status="active"><img src="./images/back_to_earth.jpg" alt=""></li>
@@ -90,47 +94,23 @@
 				<li class="slider-item" data-status="hidden"><img src="./images/pretty_lights.jpg" alt=""></li>
 			</ul>
 		</div>
-		<script>
-			let active = [0, 1, 2]
-			const sliderItems = document.querySelectorAll('.slider-item')
-			const render = () => {
-				sliderItems.forEach(sliderItem => sliderItem.dataset.status = 'hidden')
-				active.map((item, index) => { 
-					sliderItems[item].dataset.status = 'active' 
-				})
-			}
-			const previous = () => {
-				if (active[0] > 0) {
-					active[0] = active[0] - 1
-					active[1] = active[1] - 1
-					active[2] = active[2] - 1
-				} else {
-					console.log("end of list")
-				}
-				render()
-			}
-			const next = () => {
-				if (active[2] < 5) {
-					active[0] = active[0] + 1
-					active[1] = active[1] + 1
-					active[2] = active[2] + 1
-				} else {
-					console.log("end of list")
-				}
-				render()
-			}
-		</script>
-		 <footer>
-			<br>
+
+		<!-- Footer -->
+		<footer>
 			<p>Copyright 2022 CCpur Connect</p>
 			<p>
-			  Contact us: <a href="mail to:CCpur Connect@gmail.com">CCpur Connect@gmail.com</a> 
+			Contact us: <a href="mail to:CCpur Connect@gmail.com">CCpur Connect@gmail.com</a> 
 			</p>
 			<a href=""><img src="images/fb.jpg" width="50px" height="50px"></a>
 			<a href=""><img src="images/insat.jpg" width="50px" height="50px"></a>
 			<a href=""><img src="images/twitter.jpg" width="50px" height="50px"></a>
 			<h2>Know more about us</h2>
 			<a href="about_us.html">About us</a>
-		  </footer>
+		</footer>
+
+		<script src="js/index.js">
+		</script>
+
 	</body>
+
 </html>
