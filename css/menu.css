@@ -7,6 +7,7 @@
 a {
 	text-decoration: none;
 	color: white;
+	font-size: 1.5rem;
 }
 
 /* Background image */
@@ -39,7 +40,7 @@ body {
 	grid-template-columns: repeat(4, minmax(10px, 1fr));
 	padding: 0.25rem;
 	margin: 1rem;
-	grid-gap: 5px;
+	grid-gap: 8px;
 }
 
 /* styling for menu items */
@@ -111,20 +112,6 @@ body {
 .dropdown-item-container > li:not(:last-child) > a {
 	border-bottom: 1px solid black;
 }
-
-/* The gallery */
-.gallery {
-	padding: 1rem;
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(2, minmax(100px, 1fr));
-}
-
-/* All images from the gallery should occupy all available width */
-.gallery > img {
-	width: 100%;
-}
-
 /* Change the cursor to pointer on all 'li' items */
 li {
 	cursor: pointer;
@@ -157,10 +144,79 @@ ul {
 	img {
 		width: 100%;
 		height: 200px;
+		align-content: center;
 	}
 }
 
+.button-container {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+}
 
+button {
+	background-color: #fff;
+	border: none;
+	border-radius: 100%;
+	padding: 1rem;
+	position: absolute;
+}
+
+button:first-child {
+	left: 0;
+}
+
+button:last-child {
+	right: 0;
+}
+
+li[data-status="hidden"] {
+	display: none;
+}
+
+.slider {
+	width: 100%;
+	height: 20rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0.5rem;
+	padding: 0;
+}
+
+.slider-container {
+	position: relative;
+	padding: 0.5rem;
+}
+
+.slider-item > img {
+	width: 100%;
+	height: 20rem;
+	object-fit: cover;
+}
+
+ul {
+	list-style: none;
+}
+@media (max-width:600px) {
+	slider-item > img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+footer{
+     background-color: #1d4e89;
+	 font-style: italic;
+	 color: black;
+	 width: 100%;
+	 height: 400px;
+	 padding: 0.5rem;
+}
+.h2{
+	float: right;
+}
 	/* 
 	
 	ul li {

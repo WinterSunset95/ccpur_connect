@@ -76,15 +76,61 @@
 		</div>
 		<h2>Explore CHURACHANDPUR</h2>
 		<!-- Image gallery -->
-		<div class="gallery">
-			<img src="images/download.jpg">
-			<img src="images/images.jpg">
-			<img src="images/geljang.jpg">  
-			<img src="images/pretty_lights.jpg">
+		<div class="slider-container">
+			<div class="button-container">
+				<button onclick="previous()"><</button>
+				<button onclick="next()">></button>
+			</div>
+			<ul class="slider">
+				<li class="slider-item" data-status="active"><img src="./images/back_to_earth.jpg" alt=""></li>
+				<li class="slider-item" data-status="active"><img src="./images/dam_1.jpg" alt=""></li>
+				<li class="slider-item" data-status="active"><img src="./images/download.jpeg" alt=""></li>
+				<li class="slider-item" data-status="hidden"><img src="./images/geljang.jpg" alt=""></li>
+				<li class="slider-item" data-status="hidden"><img src="./images/download.jpg" alt=""></li>
+				<li class="slider-item" data-status="hidden"><img src="./images/pretty_lights.jpg" alt=""></li>
+			</ul>
 		</div>
-
+		<script>
+			let active = [0, 1, 2]
+			const sliderItems = document.querySelectorAll('.slider-item')
+			const render = () => {
+				sliderItems.forEach(sliderItem => sliderItem.dataset.status = 'hidden')
+				active.map((item, index) => { 
+					sliderItems[item].dataset.status = 'active' 
+				})
+			}
+			const previous = () => {
+				if (active[0] > 0) {
+					active[0] = active[0] - 1
+					active[1] = active[1] - 1
+					active[2] = active[2] - 1
+				} else {
+					console.log("end of list")
+				}
+				render()
+			}
+			const next = () => {
+				if (active[2] < 5) {
+					active[0] = active[0] + 1
+					active[1] = active[1] + 1
+					active[2] = active[2] + 1
+				} else {
+					console.log("end of list")
+				}
+				render()
+			}
+		</script>
+		 <footer>
+			<br>
+			<p>Copyright 2022 CCpur Connect</p>
+			<p>
+			  Contact us: <a href="mail to:CCpur Connect@gmail.com">CCpur Connect@gmail.com</a> 
+			</p>
+			<a href=""><img src="images/fb.jpg" width="50px" height="50px"></a>
+			<a href=""><img src="images/insat.jpg" width="50px" height="50px"></a>
+			<a href=""><img src="images/twitter.jpg" width="50px" height="50px"></a>
+			<h2>Know more about us</h2>
+			<a href="about_us.html">About us</a>
+		  </footer>
 	</body>
-
 </html>
-<!-- ayy--->
-<!-- see the link at the top? -->
