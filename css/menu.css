@@ -7,6 +7,7 @@
 a {
 	text-decoration: none;
 	color: white;
+	font-size: 1.5rem;
 }
 
 /* Background image */
@@ -17,6 +18,22 @@ body {
 	background-size: cover;
 	font-family: 'Montserrat', sans-serif;
 	color: white;
+}
+
+button {
+	background-color: #fff;
+	border: none;
+	border-radius: 100%;
+	padding: 1rem;
+	position: absolute;
+}
+
+button:first-child {
+	left: 0;
+}
+
+button:last-child {
+	right: 0;
 }
 
 .center {
@@ -30,6 +47,7 @@ body {
 .description {
 	padding: 1rem;
 	color: black;
+	width: 100%;
 }
 
 /* Define how the menu will look on mobile */
@@ -39,7 +57,7 @@ body {
 	grid-template-columns: repeat(4, minmax(10px, 1fr));
 	padding: 0.25rem;
 	margin: 1rem;
-	grid-gap: 5px;
+	grid-gap: 8px;
 }
 
 /* styling for menu items */
@@ -76,20 +94,13 @@ body {
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	position: absolute;
-	top: 2rem;
+	top: 3.5rem;
 	transition: all 0.2s;
 	overflow: hidden;
 	background-color: #007689;
 	border-radius: 0.25rem;
 	z-index: 20;
-}
-
-/* last two dropdowns will come out from right side */
-.dropdown-menu > li:nth-last-child(-n+2) > ul {
-	right: 0;
 }
 
 /* the next two parts are necessary for the underlined link items to show properly */
@@ -118,20 +129,6 @@ body {
 .dropdown-item-container > li:not(:last-child) > a {
 	border-bottom: 1px solid black;
 }
-
-/* The gallery */
-.gallery {
-	padding: 1rem;
-	display: grid;
-	grid-gap: 1rem;
-	grid-template-columns: repeat(2, minmax(100px, 1fr));
-}
-
-/* All images from the gallery should occupy all available width */
-.gallery > img {
-	width: 100%;
-}
-
 /* Change the cursor to pointer on all 'li' items */
 li {
 	cursor: pointer;
@@ -140,6 +137,17 @@ li {
 marquee {
 	color: black;
 	margin: 0 1rem 0 1rem;
+}
+
+.map {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(100px, 1fr));
+	grid-gap: 1rem;
+	padding: 1rem;
+}
+
+.map > img {
+	width: 100%;
 }
 
 /* All unordered lists will have a padding of 1rem */
@@ -159,8 +167,52 @@ ul {
 	.gallery {
 		grid-template-columns: repeat(4, minmax(100px, 1fr));
 	}
-	.dropdown-item-container {
-		top: 3.5rem;
+	.map {
+		grid-template-columns: repeat(2, minmax(100px, 1fr));
 	}
 }
 
+.button-container {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+li[data-status="hidden"] {
+	display: none;
+}
+
+.slider {
+	width: 100%;
+	height: 20rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0.5rem;
+	padding: 0;
+}
+
+.slider-container {
+	position: relative;
+	padding: 0.5rem;
+}
+
+.slider-item > img {
+	width: 100%;
+	height: 20rem;
+	object-fit: cover;
+}
+
+ul {
+	list-style: none;
+}
+
+footer{
+     background-color: #1d4e89;
+	 font-style: italic;
+	 color: black;
+	 width: 100%;
+	 height: 400px;
+	 padding: 0.5rem;
+}
