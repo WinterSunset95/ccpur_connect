@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -10,6 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/booking.css" rel="stylesheet">
+		<link href="css/slider.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +20,7 @@
 				<div class="nav-options">
 					<div>INR</div>
 					<div>HIN</div>
-					<a href=""><i class="fa-regular fa-circle-question"></i></a>
+					<a href=""><i class="fa-regular fa-circle-question fa-xl"></i></a>
 					<a href=""><div class="nav-options-box">List your property</div></a>
 					<a href=""><div class="nav-options-box nav-options-box-white">Register</div></a>
 					<a href=""><div class="nav-options-box nav-options-box-white">Sign in</div></a>
@@ -56,12 +52,291 @@
 					<h2 class="section-header">Offers</h2>
 					<p class="section-description">Promotions, deals and special offers for you</p>
 				</div>
-				<div class="section-slider">
+				<div class="section-slider-container">
+					<div class="section-slider-buttons">
+						<div class="slider-button" onclick="prev('offers-slider')"><i class="fa-solid fa-arrow-left"></i></div>
+						<div class="slider-button" onclick="next('offers-slider')"><i class="fa-solid fa-arrow-right"></i></div>
+					</div>
+					<div class="section-slider" id="offers-slider">
+						<div class="slider-item offers-slider-item">
+							<div class="offer">
+								<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item offers-slider-item">
+							<div class="offer">
+								<img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item offers-slider-item">
+							<div class="offer">
+								<img src="https://images.unsplash.com/photo-1497942304796-b8bc2cc898f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item offers-slider-item">
+							<div class="offer">
+								<img src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item offers-slider-item">
+							<div class="offer">
+								<img src="https://images.unsplash.com/photo-1466027397211-20d0f2449a3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80" alt="">
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section></section>
-			<section></section>
+			<section class="properties">
+				<div>
+					<h2 class="section-header">Browse by property type</h2>
+				</div>
+				<div class="section-slider-container">
+					<div class="section-slider-buttons">
+						<div class="slider-button" onclick="prev('properties-slider')"><i class="fa-solid fa-arrow-left"></i></div>
+						<div class="slider-button" onclick="next('properties-slider')"><i class="fa-solid fa-arrow-right"></i></div>
+					</div>
+					<div class="section-slider" id="properties-slider">
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1497942304796-b8bc2cc898f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1466027397211-20d0f2449a3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1497942304796-b8bc2cc898f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1522775417749-29284fb89f43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+							</div>
+						</div>
+						<div class="slider-item properties-slider-item">
+							<div class="property">
+								<img src="https://images.unsplash.com/photo-1466027397211-20d0f2449a3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=818&q=80" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="cities">
+				<div>
+					<h2 class="section-header">Explore India</h2>
+					<p class="section-description">
+						These popular destinations have a lot to offer
+					</p>
+				</div>
+				<div class="section-slider-container">
+					<div class="section-slider-buttons">
+						<div class="slider-button" onclick="prev('cities-slider')"><i class="fa-solid fa-arrow-left"></i></div>
+						<div class="slider-button" onclick="next('cities-slider')"><i class="fa-solid fa-arrow-right"></i></div>
+					</div>
+					<div class="section-slider" id="cities-slider">
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z29hfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Goa</h3>
+									<p class="city-description">
+										5,247 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Mumbai</h3>
+									<p class="city-description">
+										3,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="slider-item cities-slider-item">
+							<div class="city">
+								<img src="https://images.unsplash.com/photo-1597040663342-45b6af3d91a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+								<div class="city-details">
+									<h3 class="city-name">Delhi</h3>
+									<p class="city-description">
+										2,911 properties
+									</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
 			<section></section>
 			<section></section>
 			<section></section>
@@ -75,5 +350,7 @@
 			
 		</footer>
 
+		<script src="js/slider.js">
+		</script>
 	</body>
 </html>
