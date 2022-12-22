@@ -1,0 +1,176 @@
+body {
+ background-image: url("../images/back_to_earth.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+  }
+
+  form{
+    width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+  
+  div.elem-group {
+    margin: 20px 0;
+  }
+  
+  div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    float: left;
+    margin-left: 1%;
+  }
+  
+  label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 5px;
+    font-size: 1em;
+  }
+  
+  input, select, textarea {
+    border-radius: 1px;
+    border: 1px solid #777;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 5px;
+  }
+  
+  div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+  }
+  
+  textarea {
+    height: 250px;
+  }
+  
+  hr {
+    border: 1px dotted #ccc;
+  }
+  
+  button {
+    height: 50px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: 'Nanum Gothic';
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    border: 1px solid black;
+  }
+
+  .center {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dropdown-menu {
+	background-color: #1d4e89;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(10px, 1fr));
+	padding: 0.25rem;
+	margin: 1rem;
+	grid-gap: 8px;
+}
+
+/* styling for menu items */
+.dropdown-menu > li {
+	position: relative;
+	text-align: center;
+	font-size: small;
+	border-radius: 0.25rem;
+	padding: 0.25rem 0 0.25rem 0;
+}
+
+.dropdown-menu > li:hover {
+	background-color: #7dcfd6;
+}
+
+/* For desktop users */
+/* Show dropdown on hover */
+.dropdown-menu > li:hover > ul {
+	height: fit-content;
+	padding: 1rem;
+}
+
+/* For mobile users */
+/* Show dropdown on click */
+.dropdown-menu > li:active > ul {
+	height: fit-content;
+	padding: 1rem;
+}
+
+.dropdown-menu > li:nth-last-child(-n+2) > ul {
+	right: 0;
+}
+
+/* styling for the dropdown container */
+.dropdown-item-container {
+	height: 0;
+	width: 8rem;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 2rem;
+	transition: all 0.2s;
+	overflow: hidden;
+	background-color: #007689;
+	border-radius: 0.25rem;
+	z-index: 20;
+}
+
+/* the next two parts are necessary for the underlined link items to show properly */
+.dropdown-item-container > li {
+	width: 100%;
+	height: fit-content;
+	border-radius: 1rem;
+	padding: 1rem 0.25rem 1rem 0.25rem;
+}
+
+.dropdown-item-container > li > a {
+	text-align: center;
+	padding: 1rem 0.25rem 1rem 0.25rem;
+}
+
+/* Change background color when hovering over dropdown items */
+.dropdown-item-container > li:hover {
+	background-color: #7dcfd6;
+}
+
+.dropdown-item-container > li:hover > a {
+	border-bottom: 0px solid black;
+	color: black;
+}
+
+/* black underline on the dropdown items */
+.dropdown-item-container > li:not(:last-child) > a {
+	border-bottom: 1px solid black;
+}
+
+@media only screen and (min-width: 768px) {
+	.dropdown-menu {
+		grid-template-columns: repeat(4, minmax(100px, 1fr));
+	}
+	.dropdown-item-container {
+		top: 3.5rem;
+		width: 12rem;
+	}
+	.dropdown-menu > li {
+		padding: 1rem 0 1rem 0;
+	}
+    ul {
+        list-style-type:none;
+        padding: 1rem; /* 'rem' is preferred over 'px' */
+    }
