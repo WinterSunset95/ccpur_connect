@@ -1,133 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Booking Form</title>
-    <link rel="stylesheet" type="text/css" href="css/bookingform.css"/>
-</head>
-<body>
-    <h2 align="center"> CHURACHANDPUR WEB CONNECT </h2>
+	<head>
+		<title>Booking Form</title>
+		<link rel="stylesheet" type="text/css" href="css/bookingform.css"/>
+	</head>
+	<body>
+		<h2> CHURACHANDPUR WEB CONNECT </h2>
 
-    <!-- Navigation Bar -->
-    <ul class="dropdown-menu">
+		<form action="reservation.php" method="post">
+			<div class="elem-group">
+				<label for="name">Your Name</label>
+				<input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+			</div>
+			<div class="elem-group">
+				<label for="email">Your E-mail</label>
+				<input type="email" id="email" name="visitor_email" placeholder="john.doe@gmail.com" required>
+			</div>
+			<div class="elem-group">
+				<label for="phone">Your Phone</label>
+				<input type="tel" id="phone" name="visitor_phone" placeholder="985-632-1470" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+			</div>
+			<hr>
+			<div class="elem-group">
+				<label for="desired-hotel">Select Hotel's Preference</label>
+				<select id="desired-hotel" name="desired-hotel" required>
+					<option value="">Choose Hotel's from the List</option>
+					<option value="siktui">Siktui Farm and Resort</option>
+					<option value="geljang">Geljang Farm and Resort</option>
+					<option value="Hope cafe">Hope cafe</option>
+				</select>
+			</div>
+			<div class="elem-group inlined">
+				<label for="adult">Adults</label>
+				<input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+			</div>
+			<div class="elem-group inlined">
+				<label for="child">Children</label>
+				<input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+			</div>
+			<div class="elem-group inlined">
+				<label for="checkin-date">Check-in Date</label>
+				<input type="date" id="checkin-date" name="checkin" required>
+			</div>
+			<div class="elem-group inlined">
+				<label for="checkout-date">Check-out Date</label>
+				<input type="date" id="checkout-date" name="checkout" required>
+			</div>
+			<div class="elem-group">
+				<label for="room-selection">Select Room Preference</label>
+				<select id="room-selection" name="room_preference" required>
+					<option value="">Choose a Room from the List</option>
+					<option value="connecting">Connecting</option>
+					<option value="adjoining">Adjoining</option>
+					<option value="adjacent">Adjacent</option>
+				</select>
+			</div>
+			<hr>
+			<div class="elem-group">
+				<label for="message">Anything Else?</label>
+				<textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+			</div>
+			<button type="submit">Book The Rooms</button>
+		</form>
+		<script>
+			var currentDateTime = new Date();
+			var year = currentDateTime.getFullYear();
+			var month = (currentDateTime.getMonth() + 1);
+			var date = (currentDateTime.getDate() + 1);
 
-        <!-- News dropdown menu -->
-        <li> 
-            <span class="center">News</span>
-            <ul class="dropdown-item-container">
-                <li> <a target="_blank" href="my web.html">Latest News </a> </li>
-                <li> <a href="my web.html">Top News </a> </li>
-                <li> <a href="my web.html">Live News </a> </li>
-            </ul>
-        </li>
+			if(date < 10) {
+				date = '0' + date;
+			}
+			if(month < 10) {
+				month = '0' + month;
+			}
 
-        <!-- Markets dropdown menu -->
-        <li> 
-            <span class="center">Market</span>
-            <ul class="dropdown-item-container">
-                <li> <a href="css table.html">New Market </a> </li> 
-                <li> <a href="css table.html">Old Market </a> </li> 
-                <li> <a href="css table.html">Tuibong Bazar </a> </li>
-            </ul>
-        </li>
+			var dateTomorrow = year + "-" + month + "-" + date;
+			var checkinElem = document.querySelector("#checkin-date");
+			var checkoutElem = document.querySelector("#checkout-date");
 
-        <!-- Transportation dropdown menu -->
-        <li> 
-            <span class="center">Transport</span>
-            <ul class="dropdown-item-container">
-                <li> <a href="HTML TABLE.html">Auto Service </a> </li> 
-                <li> <a href="HTML TABLE.html">Bus Service </a> </li> 
-                <li> <a href="HTML TABLE.html">Winger Service </a> </li>
-            </ul>
-        </li>
+			checkinElem.setAttribute("min", dateTomorrow);
 
-        <!-- Travel destinations  -->
-        <li> 
-            <span class="center">Landmarks</span>
-            <ul class="dropdown-item-container">
-                <li> <a href="HTML TABLE.html">Siktui</a> </li> 
-                <li> <a href="HTML TABLE.html">Geljang </a> </li> 
-                <li> <a href="HTML TABLE.html">Hope cafe </a> </li>
-            </ul>
-        </li>
-    </ul>
-    
-    <form action="reservation.php" method="post">
-        <div class="elem-group">
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
-        </div>
-        <div class="elem-group">
-          <label for="email">Your E-mail</label>
-          <input type="email" id="email" name="visitor_email" placeholder="john.doe@gmail.com" required>
-        </div>
-        <div class="elem-group">
-          <label for="phone">Your Phone</label>
-          <input type="tel" id="phone" name="visitor_phone" placeholder="985-632-1470" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
-        </div>
-        <hr>
-        <div class="elem-group">
-            <label for="desired-hotel">Select Hotel's Preference</label>
-            <select id="desired-hotel" name="desired-hotel" required>
-                <option value="">Choose Hotel's from the List</option>
-                <option value="siktui">Siktui Farm and Resort</option>
-                <option value="geljang">Geljang Farm and Resort</option>
-                <option value="Hope cafe">Hope cafe</option>
-            </select>
-          </div>
-        <div class="elem-group inlined">
-          <label for="adult">Adults</label>
-          <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
-        </div>
-        <div class="elem-group inlined">
-          <label for="child">Children</label>
-          <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
-        </div>
-        <div class="elem-group inlined">
-          <label for="checkin-date">Check-in Date</label>
-          <input type="date" id="checkin-date" name="checkin" required>
-        </div>
-        <div class="elem-group inlined">
-          <label for="checkout-date">Check-out Date</label>
-          <input type="date" id="checkout-date" name="checkout" required>
-        </div>
-        <div class="elem-group">
-          <label for="room-selection">Select Room Preference</label>
-          <select id="room-selection" name="room_preference" required>
-              <option value="">Choose a Room from the List</option>
-              <option value="connecting">Connecting</option>
-              <option value="adjoining">Adjoining</option>
-              <option value="adjacent">Adjacent</option>
-          </select>
-        </div>
-        <hr>
-        <div class="elem-group">
-          <label for="message">Anything Else?</label>
-          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
-        </div>
-        <button type="submit">Book The Rooms</button>
-      </form>
-<script>
-      var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
-
-if(date < 10) {
-  date = '0' + date;
-}
-if(month < 10) {
-  month = '0' + month;
-}
-
-var dateTomorrow = year + "-" + month + "-" + date;
-var checkinElem = document.querySelector("#checkin-date");
-var checkoutElem = document.querySelector("#checkout-date");
-
-checkinElem.setAttribute("min", dateTomorrow);
-
-checkinElem.onchange = function () {
-    checkoutElem.setAttribute("min", this.value);
-}
-</script>
-</body>
+			checkinElem.onchange = function () {
+				checkoutElem.setAttribute("min", this.value);
+			}
+		</script>
+	</body>
 </html>
