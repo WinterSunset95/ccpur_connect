@@ -43,3 +43,46 @@ const next = () => {
 	}
 	render()
 }
+
+const events = [
+	{
+	  date: 'Jan 1, 2021',
+	  name: 'New Year's Day',
+	  image: 'file:///C:/Users/PC/Desktop/New%20folder%20(2)/htdocs/ccpur_connect/images/new-years.webp',
+	},
+	{
+	  date: 'Feb 14, 2021',
+	  name: 'Valentine's Day',
+	  image: 'C:\Users\PC\Desktop\New folder (2)\htdocs\ccpur_connect\images\Valentine-s-Day.png',
+	},
+	{
+	  date: 'Mar 17, 2021',
+	  name: 'St. Patrick's Day',
+	  image: 'https://example.com/images/st-patricks-day.jpg',
+	},
+  ];
+  
+  const eventsContainer = document.getElementById('events');
+  
+  for (const event of events) {
+	const eventElement = document.createElement('div');
+	eventElement.classList.add('event');
+  
+	const eventDate = document.createElement('div');
+	eventDate.classList.add('event-date');
+	eventDate.textContent = event.date;
+  
+	const eventName = document.createElement('div');
+	eventName.classList.add('event-name');
+	eventName.textContent = event.name;
+  
+	const eventImage = document.createElement('img');
+	eventImage.classList.add('event-image');
+	eventImage.src = event.image;
+  
+	eventElement.appendChild(eventDate);
+	eventElement.appendChild(eventImage);
+	eventElement.appendChild(eventName);
+  
+	eventsContainer.appendChild(eventElement);
+  }
