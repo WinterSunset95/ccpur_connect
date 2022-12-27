@@ -47,18 +47,13 @@ const next = () => {
 const events = [
 	{
 	  date: 'Jan 1, 2021',
-	  name: 'New Year's Day',
-	  image: 'file:///C:/Users/PC/Desktop/New%20folder%20(2)/htdocs/ccpur_connect/images/new-years.webp',
+	  name: 'New Year Day',
+	  image: "images/new-years.webp",
 	},
 	{
 	  date: 'Feb 14, 2021',
-	  name: 'Valentine's Day',
-	  image: 'C:\Users\PC\Desktop\New folder (2)\htdocs\ccpur_connect\images\Valentine-s-Day.png',
-	},
-	{
-	  date: 'Mar 17, 2021',
-	  name: 'St. Patrick's Day',
-	  image: 'https://example.com/images/st-patricks-day.jpg',
+	  name: 'Valentine Day',
+	  image: "images/Valentine-s-Day.png",
 	},
   ];
   

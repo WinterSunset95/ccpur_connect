@@ -258,16 +258,18 @@ ul {
   .event-date {
 	font-weight: bold;
 	margin-right: 20px;
+	font-size: 3em;
   }
   
   .event-name {
 	flex-grow: 1;
+	font-size: 2em;
   }
 
   .event-image {
-	width: 50rem;
-	height: 50rem;
+	width: 25rem;
+	height: 25rem;
 	margin-right: 20px;
-	border-radius: 25rem;
+	border-radius: 5rem;
 	object-fit: cover;
   }
