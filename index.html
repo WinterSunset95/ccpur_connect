@@ -7,9 +7,13 @@
 		<link rel="stylesheet" type="text/css" href="css/menu.css"/> 
 		<title>CCPUR web connect</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- This is reactjs, first we will import the react script, and then we will use it in our js files -->
 	</head>
 
 	<body>
+		<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> 
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.20.11/babel.min.js" integrity="sha512-IApuVfIDFro2vyERRyRgOa2TruCtteN5T2m6KOJvjQuteZ5HWMoUXeReD/qAaM1UN2oJRZn+12ZK3P3uykRF8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 		<!-- Header -->
 		<div style="width: 100%;">
@@ -65,7 +69,7 @@
 			<marquee bgcolor="pink"><a target="_blank" href="booking.html">***Click here for booking's***Book your favourite stay and your travels here***</a></marquee>
 		</div>
 
-		
+
 		<div class="map">
 			<img src="images/churachandpur.png">
 			<!-- Description -->
@@ -98,33 +102,29 @@
 		</div>
 		<h2>Here are some additional information</h2>
 		<div class="table">
-		<table border="2" cellspacing="0"  align="center">
-			<tr>
-				<th>Area</th>
-				<th>Population</th>
-				<th>Language</th>
-				<th>Village</th>
-			</tr>
-			<tr>
-				<td>4750 Sq.Km.</td>
-				<td>274143(2011 Census)
-					Male:138820 Female:135323</td>
-				<td>Thadou,Kuki,Hmar,Gangte,Paite,
-					Mizo,Vaiphei,Simte,Zou,Kom,
-					Chothe,Aimol,Mate,Kabui,Meitei</td>
-				<td>596</td>
-			</tr>
-		</table>
-	     </div>
-         <br>
-		 <h1>Upcoming Events</h1>
-		 <div id="events">
-		   <!-- events will be added here -->
-		   <div class="event-image">
-		   <img src="images/new-years.webp">
-		   <img src="images/Valentine-s-Day.png">
+			<table border="2" cellspacing="0"  align="center">
+				<tr>
+					<th>Area</th>
+					<th>Population</th>
+					<th>Language</th>
+					<th>Village</th>
+				</tr>
+				<tr>
+					<td>4750 Sq.Km.</td>
+					<td>274143(2011 Census)
+						Male:138820 Female:135323</td>
+					<td>Thadou,Kuki,Hmar,Gangte,Paite,
+						Mizo,Vaiphei,Simte,Zou,Kom,
+						Chothe,Aimol,Mate,Kabui,Meitei</td>
+					<td>596</td>
+				</tr>
+			</table>
 		</div>
-		 </div>
+		<br>
+		<h1>Upcoming Events</h1>
+		<div id="events">
+			<!-- events will be added here -->
+		</div>
 
 		<!-- Footer -->
 		<footer>
@@ -138,7 +138,7 @@
 			<p>Know more <a class="hover-underline" href="./about_us.html">about us</a></p>
 		</footer>
 
-		<script src="js/index.js">
+		<script type="text/babel" src="js/index.js">
 		</script>
 
 	</body>
