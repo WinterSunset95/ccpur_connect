@@ -267,6 +267,10 @@ ul {
 	margin-bottom: 1rem;
 }
 
+.event-text {
+	margin: 0 1rem;
+}
+
 .event > * {
 	width: 100%;
 }

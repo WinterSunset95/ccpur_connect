@@ -74,9 +74,10 @@ function Events() {
 					return (
 						<div className="event">
 							<img className="event-image" src={item.image} alt="" />
-							<div>
+							<div className="event-text">
 								<div>{item.date}</div>
 								<div>{item.name}</div>
+								<div>Added new line</div>
 							</div>
 						</div>
 					)
