@@ -245,13 +245,25 @@ ul {
 	}
 }
 
-.table{
-	color: black
+.table1{
+	color: black;
+	padding: 20px;
+	font-size: 1.5em;
+	object-fit: cover;
+	text-align: center;
 }
+
+@media (max-width: 600px) {
+	td, th {
+	  display: block;
+	  width: 100%;
+	  text-align: left;
+	}
+  }
 
 .events-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -261,10 +273,13 @@ ul {
 .event {
 	width: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 1rem;
+	font-size: 1.5em;
+    color: black;
+	padding: 1em;
 }
 
 .event > * {
@@ -281,9 +296,21 @@ ul {
   }
 
   .event-image {
-	width: 50rem;
-	height: 50rem;
+	width: 25rem;
+	height: 25rem;
 	margin-right: 20px;
-	border-radius: 25rem;
+	border-radius: 5rem;
 	object-fit: cover;
+}
+
+.event-desc{
+	font-size: 0.9em;
+	padding: 1rem;
+	font-family:cursive;
+}
+
+iframe{
+	width: 100%;
+	object-fit: cover;
+	padding-bottom: 1em;
 }

@@ -46,19 +46,16 @@ const next = () => {
 
 const events = [
 	{
-	  date: 'Jan 1, 2021',
-	  name: 'New Year's Day',
-	  image: 'file:///C:/Users/PC/Desktop/New%20folder%20(2)/htdocs/ccpur_connect/images/new-years.webp',
+	  date: 'Jan 1, 2023',
+	  name: 'New Year Day',
+	  image: "images/new-years.webp",
+	  desc: 'The Events will be held on the 31st night, a live countdown will be done during the event.This event will be held at Hope cafe.'
 	},
 	{
-	  date: 'Feb 14, 2021',
-	  name: 'Valentine's Day',
-	  image: 'C:\Users\PC\Desktop\New folder (2)\htdocs\ccpur_connect\images\Valentine-s-Day.png',
-	},
-	{
-	  date: 'Mar 17, 2021',
-	  name: 'St. Patrick's Day',
-	  image: 'https://example.com/images/st-patricks-day.jpg',
+	  date: 'Feb 14, 2023',
+	  name: 'Valentine Day',
+	  image: "images/Valentine-s-Day.png",
+	  desc: 'This event will be held on the night of 14th Febuary at the Hope Cafe.'
 	},
 ];
 
@@ -66,7 +63,7 @@ const events = [
 // Declaring a react component
 function Events() {
 	return (
-		<div clasName="events-container">
+		<div className="events-container">
 			{
 				// google search 'javascript array.map()'
 				events.map(item => {
@@ -77,6 +74,9 @@ function Events() {
 							<div>
 								<div>{item.date}</div>
 								<div>{item.name}</div>
+							</div>
+							<div class="event-desc">
+								<div>{item.desc}</div>
 							</div>
 						</div>
 					)
