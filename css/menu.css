@@ -246,7 +246,9 @@ ul {
 }
 
 .table{
-	color: black
+	width: 100%;
+	color: black;
+	overflow-x: scroll;
 }
 
 .events-container {
