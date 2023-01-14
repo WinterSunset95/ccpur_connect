@@ -67,7 +67,7 @@ button:last-child {
 .dropdown-menu {
 	background-color: #1d4e89;
 	display: grid;
-	grid-template-columns: repeat(4, minmax(10px, 1fr));
+	grid-template-columns: repeat(3, minmax(10px, 1fr));
 	padding: 0.25rem;
 	margin: 1rem;
 	grid-gap: 8px;
@@ -185,8 +185,6 @@ marquee {
 }
 
 .map {
-	width: 100%;
-	object-fit: cover;
 	display: grid;
 	grid-template-columns: repeat(1, minmax(100px, 1fr));
 	grid-gap: 1rem;
@@ -227,7 +225,7 @@ ul {
 /* On medium sized screens and bigger */
 @media only screen and (min-width: 768px) {
 	.dropdown-menu {
-		grid-template-columns: repeat(4, minmax(100px, 1fr));
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
 	}
 	.dropdown-item-container {
 		top: 3.5rem;
@@ -293,7 +291,4 @@ ul {
 	border-radius: 100rem;
 	object-fit: cover;
 }
-iframe{
-	width: 100%;
-	object-fit: cover;
-}
+
