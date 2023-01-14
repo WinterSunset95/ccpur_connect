@@ -245,10 +245,14 @@ ul {
 	}
 }
 
-.table{
+.table {
 	width: 100%;
 	color: black;
 	overflow-x: scroll;
+}
+
+.table::-webkit-scrollbar {
+	display: none;
 }
 
 .events-container {
